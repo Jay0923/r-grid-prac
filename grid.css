@@ -1,0 +1,122 @@
+.big{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    row-gap: 20px;
+    grid-column-gap: 20px
+}
+
+.container{
+    display: grid;
+    width: 300px;
+    grid-template-columns: 20% 40% 40%;
+    transition: background-color 0.28s;
+
+}
+.container:hover{
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+img{
+    width: 96%;
+    border-radius: 50%;
+    outline: solid 0.001px;
+    margin-left: 2px;
+    transition: outline 0.15s linear;
+}
+
+img:hover {
+    outline-width: 5px;
+}
+
+.info{
+    align-self: center;
+    color: black;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 20px ;
+}
+.Name{
+    font-weight: 700;
+    display: inline-block;
+}
+.Name::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+.Name:hover::after {
+    width: 100%;
+}
+p{
+    margin: 0;
+}
+.pop, .message{
+    font-weight: 400;
+    color: gray;
+    font-size: 15px;
+
+}
+.message{
+    line-height: 1.8;
+}
+
+.button{
+    align-self: center;
+}
+button{
+    color: white;
+    background-color: rgb(27, 119, 240);
+    border-radius: 5px;
+    padding: 7px;
+    border-style: none;
+    font-family: 'Roboto', sans-serif;
+    transition: opacity 0.15s, padding 0.28s;
+    cursor: pointer;
+    margin-left: 25% ;
+}
+button:hover {
+    padding: 10px;
+
+}
+button:active {
+    opacity: 0.7;
+    cursor: grab;
+}
+
+@media only screen and (max-width: 1000px) {
+    .big {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 10px;
+        grid-column-gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .big {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 10px;
+        grid-column-gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+.big {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10px;
+        grid-column-gap: 5px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .big {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10px;
+        grid-column-gap: 5px
+    }
+}
